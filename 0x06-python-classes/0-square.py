@@ -2,5 +2,7 @@
 
 """Defines a square classs"""
 class Square:
+
+
     """Does Nothing"""
     pass
