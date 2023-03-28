@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-class Square:
-    """
-    A class used to represent a square.
+"""square module"""
 
-    Attributes:
-        __size (int): The size of the square (private).
-    """
+
+class Square:
+    """class used to represent a square"""
 
     def __init__(self, size=0):
         """
@@ -28,8 +26,6 @@ class Square:
     def area(self):
         """
         Returns the area of the square.
-
-        Returns:
-            int: The area of the square.
+        Returns:The area of the square.
         """
         return (self.__size ** 2)
