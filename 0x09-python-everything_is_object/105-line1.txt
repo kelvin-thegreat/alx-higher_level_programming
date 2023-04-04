@@ -1,2 +1,1 @@
 2
-Python creates int objects for integer literals used in the code, and these objects are stored in memory until they are no longer referenced and become eligible for garbage collection.
