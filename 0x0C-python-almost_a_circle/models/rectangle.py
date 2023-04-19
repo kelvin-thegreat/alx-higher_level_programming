@@ -68,7 +68,8 @@ class Rectangle(Base):
     @property
     def x(self):
         """
-            getter function for xReturns: x
+            getter function for x.
+            Returns: x
         """
         return self.__x
 
@@ -89,7 +90,8 @@ class Rectangle(Base):
     @property
     def y(self):
         """
-            getter function for y -Returns: y
+            getter function for y
+            Returns: y
         """
         return self.__y
 
@@ -119,6 +121,13 @@ class Rectangle(Base):
         """
         rectangle = ""
         print_symbol = "#"
+
+#        for i in range(self.__height - 1):
+#            rectangle += print_symbol * self.__width + "\n"
+#        rectangle += print_symbol * self.__width
+
+#        print("{}".format(rectangle))
+
         print("\n" * self.y, end="")
 
         for i in range(self.height):

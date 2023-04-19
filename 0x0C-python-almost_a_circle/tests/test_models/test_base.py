@@ -1,16 +1,17 @@
 #!/usr/bin/python3
+# test_base.py
 """Defines unittests for base.py.
 
-# Unittest classes:
-#     TestBase_instantiation - line 21
-#     TestBase_to_json_string - line 108
-#     TestBase_save_to_file - line 154
-#     TestBase_from_json_string - line 232
-#     TestBase_create - line 286
-#     TestBase_load_from_file - line 338
-#     TestBase_save_to_file_csv - line 404
-#     TestBase_load_from_file_csv - line 482
-# """
+Unittest classes:
+    TestBase_instantiation - line 23
+    TestBase_to_json_string - line 110
+    TestBase_save_to_file - line 156
+    TestBase_from_json_string - line 234
+    TestBase_create - line 288
+    TestBase_load_from_file - line 340
+    TestBase_save_to_file_csv - line 406
+    TestBase_load_from_file_csv - line 484
+"""
 import os
 import unittest
 from models.base import Base
@@ -20,6 +21,7 @@ from models.square import Square
 
 class TestBase_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
+
     def test_no_arg(self):
         b1 = Base()
         b2 = Base()
@@ -83,6 +85,7 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_range_id(self):
         self.assertEqual(range(5), Base(range(5)).id)
+
     def test_bytes_id(self):
         self.assertEqual(b'Python', Base(b'Python').id)
 
@@ -91,7 +94,7 @@ class TestBase_instantiation(unittest.TestCase):
 
     def test_memoryview_id(self):
         self.assertEqual(memoryview(b'abcefg'), Base(memoryview(b'abcefg')).id)
-    
+
     def test_inf_id(self):
         self.assertEqual(float('inf'), Base(float('inf')).id)
 
@@ -245,8 +248,8 @@ class TestBase_from_json_string(unittest.TestCase):
     def test_from_json_string_two_rectangles(self):
         list_input = [
             {"id": 89, "width": 10, "height": 4, "x": 7, "y": 8},
-            {"id": 98, "width": 5, "height": 2, "x": 1, "y": 3},]
-
+            {"id": 98, "width": 5, "height": 2, "x": 1, "y": 3},
+        ]
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
         self.assertEqual(list_input, list_output)
@@ -261,7 +264,7 @@ class TestBase_from_json_string(unittest.TestCase):
         list_input = [
             {"id": 89, "size": 10, "height": 4},
             {"id": 7, "size": 1, "height": 7}
-         ]
+        ]
         json_list_input = Square.to_json_string(list_input)
         list_output = Square.from_json_string(json_list_input)
         self.assertEqual(list_input, list_output)
@@ -541,7 +544,6 @@ class TestBase_load_from_file_csv(unittest.TestCase):
     def test_load_from_file_csv_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.load_from_file_csv([], 1)
-
 
 if __name__ == "__main__":
     unittest.main()
