@@ -1,10 +1,12 @@
 #!/usr/bin/node
 
-const x = Math.floor(Number(process.argv[2]));
+// a script that prints x times “C is fun”
 
+const x = Math.floor(Number(process.argv[2]));
 if (isNaN(x)) {
   console.log('Missing number of occurrences');
 } else {
-  Array(x).fill('C is fun').forEach(line => console.log(line));
+  for (let i = 0; i < x; i++) {
+    console.log('C is fun');
+  }
 }
-
