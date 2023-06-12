@@ -4,9 +4,8 @@
 // use console.log(...) to print all output
 // No use of var and length
 
-const args = process.argv[2];
+// console.log(typeof process.argv[2] === 'undefined' ? 'No argument' : process.argv[2]);
 
-const message = typeof args === "undefined" ? "No argument" : args;
-
-console.log(message);
+const argument = process.argv[2];
+console.log(argument !== undefined ? argument : "No argument");
 
