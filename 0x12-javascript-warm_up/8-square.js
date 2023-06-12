@@ -2,6 +2,13 @@
 
 // script that prints a square
 
-const size = Math.floor(Number(process.argv[2]));
-const errorMessage = isNaN(size) ? 'Missing size' : size > 0 ? Array(size).fill('X'.repeat(size)).join('\n') : '';
-console.log(errorMessage);
+const sqrSize = Math.floor(Number(process.argv[2]));
+if (isNaN(sqrSize)) {
+  console.log('Missing size');
+} else {
+  for (let r = 0; r < sqrSize; r++) {
+    let row = '';
+    for (let c = 0; c < sqrSize; c++) row += 'X';
+    console.log(row);
+  }
+}
