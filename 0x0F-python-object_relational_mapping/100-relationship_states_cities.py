@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" This script prints all City objects from the database `hbtn_0e_14_usa`. """
+""" 
+This script prints all City objects 
+from the database `hbtn_0e_14_usa`. 
+"""
 
 from relationship_city import City
 from sys import argv
@@ -8,7 +11,10 @@ from relationship_state import Base, State
 from sqlalchemy import create_engine
 
 if __name__ == "__main__":
-    """ Connecting the DB and get the cities from the DB. """
+    """ 
+    Connecting the DB and 
+    get the cities from the DB. 
+    """
 
     db_url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1], argv[2], argv[3])
     engine = create_engine(db_url)
