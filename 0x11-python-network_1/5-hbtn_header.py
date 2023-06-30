@@ -1,12 +1,8 @@
 #!/usr/bin/python3
 """
-This script takes in a URL, sends a request to the URL, and displays the value of the variable X-Request-Id in the response header.
-
-Usage: python script.py <URL>
-
-Dependencies: requests, sys
+This script that sends a request to the URL,displays X-Request-Id in the response header.
+Usage: p./5-hbtn_header.py <URL>
 """
-
 import requests
 import sys
 
