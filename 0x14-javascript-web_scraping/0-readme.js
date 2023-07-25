@@ -1,5 +1,4 @@
 #!/usr/bin/node
-'use strict';
 
 const fs = require('fs');
 
@@ -12,4 +11,3 @@ fs.readFile(filePath, 'utf-8', (err, data) => {
     console.log(data);
   }
 });
-
