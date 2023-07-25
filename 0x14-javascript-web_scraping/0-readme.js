@@ -1,8 +1,15 @@
 #!/usr/bin/node
-const fs = require('fs');
-const file = process.argv[2];
-const string = process.argv[3];
+'use strict';
 
-fs.writeFile(file, string, 'utf-8', function (err) {
-  if (err) console.log(err);
+const fs = require('fs');
+
+const filePath = process.argv[2];
+
+fs.readFile(filePath, 'utf-8', (err, data) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log(data);
+  }
 });
+
