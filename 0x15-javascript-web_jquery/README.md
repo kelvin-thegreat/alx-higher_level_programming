@@ -7,8 +7,8 @@
 
 # API
 ----------------------------------------------
-1. --Introduction
-2. --GET & POST request
+1. Introduction
+2. GET & POST request
 
 # JQuery Ajax Tutorial
 ----------------------------------------------
