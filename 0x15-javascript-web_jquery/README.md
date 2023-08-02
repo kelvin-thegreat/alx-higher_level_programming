@@ -1,13 +1,13 @@
 #JavaScript?
-##Selector
-##Get and set content
-##Manipulate CSS classes
-##Manipulate DOM elements
+1. Selector
+2. Get and set content
+2. Manipulate CSS classes
+3. Manipulate DOM elements
 #API
-##Introduction
-##GET & POST request
+1. Introduction
+2. GET & POST request
 #JQuery Ajax Tutorial #1 - Using AJAX & API’s
-##Troubleshooting JavaScript
-##JQuery
-##JQuery API
-##JQuery Ajax
+1. Troubleshooting JavaScript
+2. JQuery
+3. JQuery API
+4. JQuery Ajax
